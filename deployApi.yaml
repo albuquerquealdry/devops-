@@ -2,7 +2,11 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: apiadmin
+  labels:
+    app: apiadmin
 spec:
   containers:
   - name : winhead
     image: winhead/apiadmin:latest
+    ports: 
+      - containerPort: 8080
